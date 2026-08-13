@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J45 Gallery</title>
-
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             background-color: #0a0a0a;
             color: white;
@@ -14,69 +16,70 @@
             padding: 20px;
             text-align: center;
         }
-
         h1 {
             margin-bottom: 30px;
+            font-size: clamp(1.5rem, 6vw, 2.2rem);
         }
-
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 25px;
             padding: 10px;
         }
-
         .item {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
         .item img {
             width: 90%;
             max-width: 260px;
             border-radius: 10px;
             transition: transform 0.2s;
         }
-
         .item img:hover {
             transform: scale(1.05);
         }
-
         .caption {
             margin-top: 8px;
             color: #cccccc;
             font-size: 1rem;
         }
-
         a.back {
             color: #00aaff;
             text-decoration: none;
             display: inline-block;
             margin-top: 40px;
+            font-size: 1rem;
+        }
+
+        /* Small phone adjustments */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                padding: 4px;
+            }
+            .item img {
+                width: 100%;
+                max-width: 320px;
+            }
         }
     </style>
 </head>
 <body>
-
     <h1>J45 Gallery</h1>
-
     <div class="gallery">
-
         <div class="item">
             <img src="CameraFlash.jpg" alt="Image 1">
-            
         </div>
-
         <div class="item">
             <img src="CameraFlash1.jpg" alt="Image 2">
-            
         </div>
-
-
     </div>
-
     <a href="index.html" class="back">⬅ Back to Home</a>
-
 </body>
 </html>
