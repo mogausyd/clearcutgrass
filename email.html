@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             background-color: #0a0a0a;
             color: white;
@@ -14,63 +16,74 @@
             margin: 0;
             padding: 40px;
         }
-
         h1 {
             margin-bottom: 40px;
+            font-size: clamp(1.6rem, 7vw, 2.5rem);
         }
-
         .contact-box {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 40px;
         }
-
         .item {
             display: flex;
             align-items: center;
             gap: 15px;
             font-size: 1.3rem;
+            max-width: 100%;
         }
-
         .item img {
             width: 40px;
             height: 40px;
+            flex-shrink: 0;
         }
-
         a {
             color: #00aaff;
             text-decoration: none;
             font-size: 1.2rem;
+            word-break: break-word;
         }
-
         a.back {
             display: inline-block;
             margin-top: 40px;
         }
+
+        /* Small phone adjustments */
+        @media (max-width: 480px) {
+            body {
+                padding: 20px;
+            }
+            .contact-box {
+                gap: 28px;
+            }
+            .item {
+                gap: 10px;
+                font-size: 1.1rem;
+            }
+            .item img {
+                width: 32px;
+                height: 32px;
+            }
+            a {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-
     <h1>Contact Me</h1>
-
     <div class="contact-box">
-
-
         <div class="item">
             <img src="gmail-icon.png" alt="Gmail Icon">
             <a href="mailto:1234lethabo@gmail.com">1234lethabo@gmail.com</a>
         </div>
 
-    
         <div class="item">
             <img src="instagram-icon.jpeg" alt="Instagram Icon">
             <a href="https://www.instagram.com/clearcutgrass/#" target="_blank">@clearcutgrass</a>
         </div>
-
     </div>
-
     <a href="index.html" class="back">⬅ Back to Home</a>
-
 </body>
 </html>
