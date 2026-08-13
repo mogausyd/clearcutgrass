@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
-
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             background-color: #0a0a0a;
             color: white;
@@ -14,35 +16,44 @@
             padding: 40px;
             text-align: center;
         }
-
         h1 {
             margin-bottom: 30px;
+            font-size: clamp(1.6rem, 7vw, 2.5rem);
         }
-
         .coming-soon img {
-            width: 60%;
+            width: 80%;
             max-width: 400px;
             border-radius: 12px;
             margin-top: 30px;
         }
-
         a.back {
             display: inline-block;
             margin-top: 40px;
             color: #00aaff;
             text-decoration: none;
+            font-size: 1rem;
+        }
+
+        /* Small phone adjustments */
+        @media (max-width: 480px) {
+            body {
+                padding: 20px;
+            }
+            .coming-soon img {
+                width: 90%;
+                margin-top: 20px;
+            }
+            a.back {
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
 <body>
-
     <h1>Coming Soon</h1>
-
     <div class="coming-soon">
         <img src="COMING SOON.gif" alt="Coming Soon GIF">
     </div>
-
     <a href="index.html" class="back">⬅ Back to Home</a>
-
 </body>
 </html>
