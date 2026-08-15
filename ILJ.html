@@ -68,6 +68,34 @@
             font-size: 1rem;
         }
 
+        /* PDF button */
+        .pdf-section {
+            margin-top: 50px;
+        }
+        .pdf-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #b93038;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .pdf-button:hover {
+            background-color: #d43a43;
+            transform: scale(1.05);
+        }
+        .pdf-button svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+            flex-shrink: 0;
+        }
+
         /* Small phone adjustments */
         @media (max-width: 480px) {
             body {
@@ -83,31 +111,24 @@
                 width: 90%;
                 max-width: 320px;
             }
+            .pdf-button {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <h1>ILJ Gallery</h1>
-    <div class="gallery">
-        <div class="item">
-            <img src="ILJ1.jpg" alt="Image 1">
-        </div>
-        <div class="item">
-            <img src="ILJ2.jpg" alt="Image 2">
-        </div>
-        <div class="item2">
-            <img src="ILJ3.jpg" alt="Image 3">
-        </div>
-        <div class="item">
-            <img src="ILJ4.jpg" alt="Image 4">
-        </div>
-        <div class="item">
-            <img src="ILJ5.jpg" alt="Image 5">
-        </div>
-        <div class="item">
-            <img src="ILJ6.jpg" alt="Image 6">
-        </div>
+
+
+    <div class="pdf-section">
+        <a href="CCG VOL 1.pdf" class="pdf-button" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2.5L18.5 9H14V4.5zM8 13h1.5a1.5 1.5 0 0 1 0 3H8v2H6.75v-5H8zm.75 1.9H8v-.65h.75a.325.325 0 0 1 0 .65zM12 13h1.75c.83 0 1.5.67 1.5 1.5v2c0 .83-.67 1.5-1.5 1.5H12v-5zm1.25 3.75c.14 0 .25-.11.25-.25v-2c0-.14-.11-.25-.25-.25H13.25v2.5h.25zM17.75 13H16v5h1.25v-1.75h1.25V15h-1.25v-.75h1.75V13z"/></svg>
+            View CLEARCUTGRASS Vol. 1 (PDF)
+        </a>
     </div>
+
     <a href="index.html" class="back">⬅ Back to Home</a>
 </body>
 </html>
